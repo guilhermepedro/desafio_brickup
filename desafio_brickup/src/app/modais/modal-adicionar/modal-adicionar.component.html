@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="px-6 py-4 border-b" fxLayout="row" fxLayoutAlign="start center">
+        <h2 class="title m-0">Adicionar tarefa</h2>
+    </div>
+    <mat-dialog-content fxLayout="row" fxLayoutAlign="center" [formGroup]="form">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field fxFlex="grow" appearance="outline">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput formControlName="tarefa" placeholder="Ex. Descrição da tarefa" #input>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field fxFlex="grow" appearance="outline">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status" [(ngModel)]="statusPadrao">
+                        <mat-option value="Pendente">
+                            Pendente
+                        </mat-option>
+                        <mat-option value="Concluída">
+                            Concluída
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="bg-contrast-black center">
+                <mat-icon>add_a_photo</mat-icon><input #imagem type="file" (change)="capturarImagem($event, 'imagem')" />
+            </div>
+            <button mat-button mat-raised-button color="primary" fxFlex="grow"
+             (click)="adicionarTarefa()">
+                Salvar
+            </button>
+        </div>
+    

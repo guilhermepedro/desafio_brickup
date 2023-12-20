@@ -8,19 +8,23 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { MaterialModule } from 'src/app/modules/material.module';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ModalAdicionarComponent } from './modais/modal-adicionar/modal-adicionar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    ModalAdicionarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

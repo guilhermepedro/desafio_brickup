@@ -1,0 +1,21 @@
+.container{
+    width: 400px;
+    height: 350px;
+    
+}
+
+mat-dialog-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+input[type="file"] {
+    display: flex;
+}
+
+.bg-contrast-black{
+    margin-bottom: 15%;
+}
